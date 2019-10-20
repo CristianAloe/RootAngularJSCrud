@@ -16,7 +16,7 @@ angular.module('app').config(function($stateProvider, $urlServiceProvider) { //s
 
       $stateProvider.state('users.list', {  // root figlio che mi farà comparire una lista
         url: '/users.list',  
-        template: '<div> sono dentro il div di users.list </div>'
+        template: '<div> sono dentro il div di users.list. <a ui-sref="home"> Torna alla home</a> </div>'
 
       });
 });
