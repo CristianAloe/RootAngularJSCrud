@@ -1,7 +1,7 @@
-let app = angular.module('app', ['ui.router', 'ngMaterial']); //richiamo del module principale e delle dipendenze del modulo
+let app = angular.module('app', ['ui.router', 'ngMaterial']); //creoo il  module principale e aggiungo le dipendenze del modulo
 
 angular.module('app').config(function($stateProvider, $urlServiceProvider) { //sintassi per il router
-    $urlServiceProvider.rules.otherwise({ state: 'home' });
+    $urlServiceProvider.rules.otherwise({ state: 'home' }); //CR: state fa riferimento alla prima pagina
     
     $stateProvider.state('home', {  //root principale
       url: '/home',      
@@ -17,8 +17,8 @@ angular.module('app').config(function($stateProvider, $urlServiceProvider) { //s
       $stateProvider.state('users.list', {  // root figlio che mi farà comparire una lista
         url: '/users.list',  
         component: 'users',
-        resolve: {
-          users: function(UserService) {
+        resolve: {  //Il resolve avviene solo nel momento in cui sono stati caricati i file
+          users: function(UserService) { 
             return UserService.list();
           }
         }

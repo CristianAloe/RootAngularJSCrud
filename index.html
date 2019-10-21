@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> <!--Carico le libreria per AngularJs, AngularMaterial, Ui-Route-->
     <script
       data-require="angular.js@1.6.5"
       data-semver="1.6.5"
@@ -44,11 +44,11 @@
     </style>
   </head>
 
-  <body ng-app="app" >
+  <body ng-app="app" > <!--Richiamo il modulo principale app-->
         <ui-view></ui-view> <!--Spazio per la root-->
   </body>
-  <script src="app.config.js"></script>
-  <script src="components/users/users.comp.js"></script>
-  <script src="service/users.service.js"></script>
+  <script src="app.config.js"></script> <!--Riferimento file app.config.js-->
+  <script src="components/users/users.comp.js"></script> <!--Aggiungo riferimento al componente-->
+  <script src="service/users.service.js"></script> <!--Aggiungo il riferimento al service-->
  
 </html>
