@@ -1,19 +1,10 @@
-<h1>users</h1> <!--Creo il template del componente "users"-->
+<h1>Visualizza i dettagli</h1> <!--Creo il template del componente "users"-->
 
 <a ui-sref="home"> vai home </a>  <!--Collegamento alla pagina principale-->
 <div> 
   <!-- per prendere per esempio un elemento da users, devo controllare che users sia stato popolato dalla promise , per evitare il rischio di leggere variabili vuote e generare errori --> 
-{{users}}  <!--Per il binding dei dati-->
+{{users}}  
+<!--Per il binding dei dati-->
  <!-- primo utente della lista : {{ users && users[0] ? users[0].name : 'vuoto'}} --><!--Operatore ternario in ci-->
  
 </div> <br>
-<h1> Visualizza i nomi:</h1><br>
-<div ng-repeat="user in users">
-    <li> <a ui-sref="users.detail({ userId: user.id })">{{user.first_name}}</a><button>Activeted</button></li>
-    
-
- </div>
-
- 
-
- 

@@ -23,4 +23,14 @@ angular.module('app').config(function($stateProvider, $urlServiceProvider) { //s
           }
         }
       });
+
+      $stateProvider.state('users.detail', {  // root figlio che mi farà comparire una lista
+        url: '/users.detail',  
+        component: 'usersDetail',
+        resolve: {  //Il resolve avviene solo nel momento in cui sono stati caricati i file
+          users: function(UserService) { 
+            return UserService.list();
+          }
+        }
+      });
 });
