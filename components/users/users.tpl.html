@@ -1,0 +1,8 @@
+<h1>users</h1> // costruisco
+
+<a ui-sref="home"> vai home </a>
+<div>
+  <!-- per prendere per esempio un elemento da users, devo controllare che users sia stato popolato dalla promise , per evitare il rischio di leggere variabili vuote e generare errori --> 
+{{users}}
+  primo utente della lista : {{ users && users[0] ? users[0].name : 'vuoto'}}
+</div>
